@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #172033;
+  background: #fff7ef;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(248, 184, 78, 0.32), transparent 30rem),
+    linear-gradient(180deg, #fff7ef 0%, #fff 42%, #fff7ef 100%);
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+.safe-bottom {
+  padding-bottom: max(1.5rem, env(safe-area-inset-bottom));
+}
+
+@layer components {
+  .input {
+    @apply w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-base outline-none transition focus:border-brand focus:ring-4 focus:ring-brand/10;
+  }
+}
